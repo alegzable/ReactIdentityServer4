@@ -90,7 +90,7 @@ namespace IdentityServer.Controllers
                 return Redirect(vm.ReturnUrl);
             }
 
-            return View();
+            return View(new RegisterViewModel() { ReturnUrl = vm.ReturnUrl});
         }
     }
 }
