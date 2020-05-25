@@ -10,7 +10,7 @@ const userManagerConfig = {
 	response_type: "code",
 	scope: "openid Api",
 	userStore: new WebStorageStateStore({ store: window.localStorage }),
-};
+} as const;
 
 Log.logger = console;
 Log.level = Log.INFO;

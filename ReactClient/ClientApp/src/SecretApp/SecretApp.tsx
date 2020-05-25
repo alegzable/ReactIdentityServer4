@@ -23,7 +23,7 @@ const SecretApp = () => {
 						</NavLink>
 					</li>
 					<li>
-						<button onClick={() => userData.userManager.signoutRedirect()}>Sign Out</button>
+						<button onClick={() => userData?.userManager?.signoutRedirect()}>Sign Out</button>
 					</li>
 				</ul>
 			</nav>

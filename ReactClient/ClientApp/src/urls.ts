@@ -7,6 +7,6 @@ const urls = {
 	silentRedirectUri: `${clientBaseUrl}silent-callback`,
 	postLogoutRedirectUri: clientBaseUrl,
 	apiSecret: `${apiBaseUrl}secret`,
-};
+} as const;
 
 export default urls;

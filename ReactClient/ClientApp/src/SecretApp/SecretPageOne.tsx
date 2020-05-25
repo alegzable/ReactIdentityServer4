@@ -3,7 +3,7 @@ import axios from "axios";
 import urls from "../urls";
 
 const SecretPageOne = () => {
-	const [secretMessage, setSecretMessage] = useState(undefined);
+	const [secretMessage, setSecretMessage] = useState<string | undefined>(undefined);
 
 	const getSecretMessage = async () => {
 		setSecretMessage("Fetching Secret Message...");

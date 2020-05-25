@@ -1,10 +1,11 @@
 import axios from "axios";
+import { User, UserManager } from "oidc-client";
 
-export const setDefaultAuthorizationHeader = (user) => {
+export const setDefaultAuthorizationHeader = (user: User) => {
 	setAuthorizationHeader(axios.defaults.headers.common, user);
 };
 
-export const setAuthInterceptors = (user, userManager) => {
+export const setAuthInterceptors = (user: User, userManager: UserManager) => {
 	axios.interceptors.response.use(
 		(r) => r,
 		(error) => {
@@ -29,11 +30,11 @@ export const setAuthInterceptors = (user, userManager) => {
 	);
 };
 
-const setAuthorizationHeader = (headers, user) => {
+const setAuthorizationHeader = (headers: any, user: User) => {
 	headers["Authorization"] = "Bearer " + user.access_token;
 };
 
-const setAuthorizationHeadersAndRetryRequest = (user, axiosRequestConfig) => {
+const setAuthorizationHeadersAndRetryRequest = (user: User, axiosRequestConfig: any) => {
 	setDefaultAuthorizationHeader(user);
 	setAuthorizationHeader(axiosRequestConfig.headers, user);
 
