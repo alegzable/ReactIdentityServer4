@@ -6,7 +6,7 @@ namespace IdentityServer
 {
     public static class Configuration
     {
-        private static string _clientBaseUrl = "https://localhost:44339/";
+        private static string _clientBaseUrl = "https://localhost:44339";
         private static string _apiName = "Api";
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace IdentityServer
                 AllowedGrantTypes = GrantTypes.Code,
                 RequirePkce = true,
                 RequireClientSecret = false,
-                RedirectUris = {$"{_clientBaseUrl}callback", $"{_clientBaseUrl}silent-callback"},
+                RedirectUris = {$"{_clientBaseUrl}/callback", $"{_clientBaseUrl}/silent-callback"},
                 PostLogoutRedirectUris = {_clientBaseUrl},
                 AllowedCorsOrigins = {_clientBaseUrl},
                 AllowedScopes =
