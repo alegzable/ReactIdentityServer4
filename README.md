@@ -8,3 +8,6 @@ Example app that implements OAuth2 Authorization Code flow with PKCE (https://oa
 2.  Run all scripts from dbScripts.txt (from ReactIdentityServer4\IdentityServer directory)
 3.  Set all three projects as StartUp Projects
 4.  Start the solution
+
+### Side notes
+ReactClient is built with Create React App (https://create-react-app.dev/).
